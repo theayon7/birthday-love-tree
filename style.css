@@ -1,0 +1,53 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #000000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+.main-container {
+    display: flex;
+    width: 90%;
+    max-width: 1100px;
+    height: 90vh;
+    align-items: center;
+}
+
+.text-container {
+    flex: 1;
+    color: #fff;
+    z-index: 10;
+}
+
+.msg-line {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+    font-weight: 500;
+}
+
+.msg-line.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.canvas-container {
+    flex: 1.5;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#treeCanvas {
+    /* Canvas size is handled by JS, this keeps it responsive */
+    width: 100%;
+    height: 100%; 
+}
